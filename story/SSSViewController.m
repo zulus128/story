@@ -8,7 +8,6 @@
 
 #import "SSSViewController.h"
 //#import "MPMoviePlayerViewController.h"
-#import <MediaPlayer/MediaPlayer.h>
 
 @implementation SSSViewController
 
@@ -23,23 +22,23 @@
 - (void)viewDidLoad
 {
     
-    self.view.backgroundColor = [UIColor redColor];
+//    self.view.backgroundColor = [UIColor redColor];
     
     NSString *url = [[NSBundle mainBundle]
-                     pathForResource:@"Bull"
+                     pathForResource:@"Start"
                      ofType:@"mov"];
-    MPMoviePlayerController *player =
+    player =
     [[MPMoviePlayerController alloc]
      initWithContentURL:[NSURL fileURLWithPath:url]];
     
-    [[NSNotificationCenter defaultCenter]
-     addObserver:self
-     selector:@selector(movieFinishedCallback:)
-     name:MPMoviePlayerPlaybackDidFinishNotification
-     object:player];
+//    [[NSNotificationCenter defaultCenter]
+//     addObserver:self
+//     selector:@selector(movieFinishedCallback:)
+//     name:MPMoviePlayerPlaybackDidFinishNotification
+//     object:player];
     
     //---play partial screen---
-    player.view.frame = CGRectMake(184, 200, 400, 300);
+    player.view.frame = /*self.view.bounds;*/CGRectMake(0, 0, 1024, 768);
     player.view.backgroundColor = [UIColor clearColor];
     player.controlStyle = MPMovieControlStyleNone;
 
@@ -65,20 +64,28 @@
 //    [self.view addSubview:movieView.view];
 }
 
-- (void) movieFinishedCallback:(NSNotification*) aNotification {
-    MPMoviePlayerController *player = [aNotification object];
-    [[NSNotificationCenter defaultCenter]
-     removeObserver:self
-     name:MPMoviePlayerPlaybackDidFinishNotification
-     object:player];    
-    [player autorelease];    
+//- (void) movieFinishedCallback:(NSNotification*) aNotification {
+//    MPMoviePlayerController *player = [aNotification object];
+//    [[NSNotificationCenter defaultCenter]
+//     removeObserver:self
+//     name:MPMoviePlayerPlaybackDidFinishNotification
+//     object:player];    
+//    [player autorelease];    
+//}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [[touches allObjects] objectAtIndex:0];
+    CGPoint point = [touch locationInView:self.view];
+    NSLog(@"Point: %f %f", point.x, point.y);
+    
 }
 
 - (void)viewDidUnload
 {
     
     
-    
+    [player release];
     
     [super viewDidUnload];
     // Release any retained subviews of the main view.

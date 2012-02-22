@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
 
-@interface SSSViewController : UIViewController
+@interface SSSViewController : UIViewController {
+    
+    MPMoviePlayerController *player;
+}
 
 @end
