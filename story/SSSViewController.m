@@ -31,11 +31,11 @@
     [[MPMoviePlayerController alloc]
      initWithContentURL:[NSURL fileURLWithPath:url]];
     
-//    [[NSNotificationCenter defaultCenter]
-//     addObserver:self
-//     selector:@selector(movieFinishedCallback:)
-//     name:MPMoviePlayerPlaybackDidFinishNotification
-//     object:player];
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(movieFinishedCallback:)
+     name:MPMoviePlayerPlaybackDidFinishNotification
+     object:player];
     
     //---play partial screen---
     player.view.frame = /*self.view.bounds;*/CGRectMake(0, 0, 1024, 768);
@@ -43,6 +43,26 @@
     player.controlStyle = MPMovieControlStyleNone;
 
     [self.view addSubview:player.view];
+  
+    NSString *url1 = [[NSBundle mainBundle]
+                     pathForResource:@"Fox"
+                     ofType:@"mov"];
+    player1 =
+    [[MPMoviePlayerController alloc]
+     initWithContentURL:[NSURL fileURLWithPath:url1]];
+    
+//    [[NSNotificationCenter defaultCenter]
+//     addObserver:self
+//     selector:@selector(movieFinishedCallback:)
+//     name:MPMoviePlayerPlaybackDidFinishNotification
+//     object:player1];
+    
+    //---play partial screen---
+//    player1.view.frame = /*self.view.bounds;*/CGRectMake(600, 400, 164, 166);
+//    player1.view.backgroundColor = [UIColor clearColor];
+//    player1.controlStyle = MPMovieControlStyleNone;
+//    
+//    [self.view addSubview:player1.view];
     
     //---play movie---
     [player play];
@@ -64,14 +84,17 @@
 //    [self.view addSubview:movieView.view];
 }
 
-//- (void) movieFinishedCallback:(NSNotification*) aNotification {
-//    MPMoviePlayerController *player = [aNotification object];
+- (void) movieFinishedCallback:(NSNotification*) aNotification {
+
+    bLisa = YES;
+    
+    //    MPMoviePlayerController *player = [aNotification object];
 //    [[NSNotificationCenter defaultCenter]
 //     removeObserver:self
 //     name:MPMoviePlayerPlaybackDidFinishNotification
 //     object:player];    
 //    [player autorelease];    
-//}
+}
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
@@ -79,6 +102,14 @@
     CGPoint point = [touch locationInView:self.view];
     NSLog(@"Point: %f %f", point.x, point.y);
     
+    CGRect r1 = CGRectMake(houseX - 100, houseY - 100, 200, 200);
+    if(bLisa && CGRectContainsPoint(r1, point)) {
+       
+        NSLog(@"Lisa");
+        //---play movie---
+        [player1 play];
+
+    }
 }
 
 - (void)viewDidUnload
@@ -86,6 +117,7 @@
     
     
     [player release];
+    [player1 release];
     
     [super viewDidUnload];
     // Release any retained subviews of the main view.
