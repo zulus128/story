@@ -11,11 +11,14 @@
 
 #define houseX 778
 #define houseY 481
+#define noraX 928
+#define noraY 689
 
 @interface SSSViewController : UIViewController {
     
-    MPMoviePlayerController *player;
+    MPMoviePlayerViewController *player;
     MPMoviePlayerController *player1;
+    MPMoviePlayerController *player2;
     BOOL bLisa;
 }
 
