@@ -72,7 +72,14 @@
     player2 =
     [[MPMoviePlayerController alloc]
      initWithContentURL:[NSURL fileURLWithPath:url2]];
-    
+
+    NSString *url3 = [[NSBundle mainBundle]
+                      pathForResource:@"Smoke"
+                      ofType:@"mov"];
+    player3 =
+    [[MPMoviePlayerController alloc]
+     initWithContentURL:[NSURL fileURLWithPath:url3]];
+
 //    [[NSNotificationCenter defaultCenter]
 //     addObserver:self
 //     selector:@selector(movieFinishedCallback:)
@@ -163,6 +170,26 @@
         [player2 play];
         
     }
+    
+    CGRect r3 = CGRectMake(smokeX - 100, smokeY - 100, 200, 200);
+    if(CGRectContainsPoint(r3, point)) {
+        
+        NSLog(@"Smoke");
+        
+        //---play partial screen---
+        player3.view.frame = /*self.view.bounds;*/CGRectMake(600, -350, 350, 794);
+        player3.view.backgroundColor = [UIColor clearColor];
+        player3.controlStyle = MPMovieControlStyleNone;
+        //            [player1 prepareToPlay];
+        //            [player1 stop];
+        
+        [self.view addSubview:player3.view];
+        
+        //---play movie---
+        [player3 play];
+        
+    }
+    
 }
 
 - (void)viewDidUnload
@@ -172,6 +199,7 @@
     [player release];
     [player1 release];
     [player2 release];
+    [player3 release];
     
     [super viewDidUnload];
     // Release any retained subviews of the main view.
