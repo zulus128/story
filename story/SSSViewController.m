@@ -25,8 +25,8 @@
 //    self.view.backgroundColor = [UIColor redColor];
     
     NSString *url = [[NSBundle mainBundle]
-                     pathForResource:@"Start"
-                     ofType:@"mov"];
+                     pathForResource:@"12_Start"
+                     ofType:@"mp4"];
     player =
     [[MPMoviePlayerViewController alloc]
      initWithContentURL:[NSURL fileURLWithPath:url]];
@@ -60,22 +60,22 @@
        bLisa = YES;
     
     NSString *url1 = [[NSBundle mainBundle]
-                     pathForResource:@"Fox"
-                     ofType:@"mov"];
+                     pathForResource:@"12_Fox"
+                     ofType:@"mp4"];
     player1 =
     [[MPMoviePlayerController alloc]
      initWithContentURL:[NSURL fileURLWithPath:url1]];
 
     NSString *url2 = [[NSBundle mainBundle]
-                      pathForResource:@"Nora"
-                      ofType:@"mov"];
+                      pathForResource:@"12_Zayats"
+                      ofType:@"mp4"];
     player2 =
     [[MPMoviePlayerController alloc]
      initWithContentURL:[NSURL fileURLWithPath:url2]];
 
     NSString *url3 = [[NSBundle mainBundle]
-                      pathForResource:@"Smoke"
-                      ofType:@"mov"];
+                      pathForResource:@"12_Smoke"
+                      ofType:@"mp4"];
     player3 =
     [[MPMoviePlayerController alloc]
      initWithContentURL:[NSURL fileURLWithPath:url3]];
@@ -133,22 +133,52 @@
     CGPoint point = [touch locationInView:self.view];
     NSLog(@"Point: %f %f", point.x, point.y);
     
+    CGRect r0 = CGRectMake(bullX - 200, bullY - 200, 400, 400);
+    if(bLisa && CGRectContainsPoint(r0, point)) {
+        
+        NSLog(@"Bull");
+        
+        //---play partial screen---
+//        player.view.frame = /*self.view.bounds;*/CGRectMake(0, 0, 1024, 768);
+//        player.view.backgroundColor = [UIColor clearColor];
+//        player.controlStyle = MPMovieControlStyleNone;        
+//        [self.view addSubview:player.view];
+        
+        NSString *url = [[NSBundle mainBundle]
+                         pathForResource:@"12_Bull"
+                         ofType:@"mp4"];
+        
+        MPMoviePlayerController* mp = player.moviePlayer;
+        mp.contentURL = [NSURL fileURLWithPath:url];
+        [mp play];
+        //[player initWithContentURL:[NSURL fileURLWithPath:url]];
+        
+        //---play movie---
+     //   [player play];
+        
+    }
+
     CGRect r1 = CGRectMake(houseX - 100, houseY - 100, 200, 200);
     if(bLisa && CGRectContainsPoint(r1, point)) {
        
         NSLog(@"Lisa");
         
         //---play partial screen---
-            player1.view.frame = /*self.view.bounds;*/CGRectMake(650, 370, 164, 166);
-            player1.view.backgroundColor = [UIColor clearColor];
-            player1.controlStyle = MPMovieControlStyleNone;
-//            [player1 prepareToPlay];
-//            [player1 stop];
-        
-            [self.view addSubview:player1.view];
+//            player1.view.frame = /*self.view.bounds;*/CGRectMake(650, 370, 164, 166);
+//            player1.view.backgroundColor = [UIColor clearColor];
+//            player1.controlStyle = MPMovieControlStyleNone;        
+//            [self.view addSubview:player1.view];
 
         //---play movie---
-        [player1 play];
+//        [player1 play];
+        
+        NSString *url1 = [[NSBundle mainBundle]
+                          pathForResource:@"12_Fox"
+                          ofType:@"mp4"];
+        
+        MPMoviePlayerController* mp = player.moviePlayer;
+        mp.contentURL = [NSURL fileURLWithPath:url1];
+        [mp play];
 
     }
 

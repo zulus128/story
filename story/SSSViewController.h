@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
 
+#define bullX 270
+#define bullY 340
 #define houseX 778
 #define houseY 481
 #define noraX 928

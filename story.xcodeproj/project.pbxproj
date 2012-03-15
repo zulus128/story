@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F21557411511C04A00890F82 /* 12_Background_01.png in Resources */ = {isa = PBXBuildFile; fileRef = F21557391511C04A00890F82 /* 12_Background_01.png */; };
+		F21557421511C04A00890F82 /* 12_Background_02.png in Resources */ = {isa = PBXBuildFile; fileRef = F215573A1511C04A00890F82 /* 12_Background_02.png */; };
+		F21557431511C04A00890F82 /* 12_Bull.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F215573B1511C04A00890F82 /* 12_Bull.mp4 */; };
+		F21557441511C04A00890F82 /* 12_Fox.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F215573C1511C04A00890F82 /* 12_Fox.mp4 */; };
+		F21557451511C04A00890F82 /* 12_Kust.png in Resources */ = {isa = PBXBuildFile; fileRef = F215573D1511C04A00890F82 /* 12_Kust.png */; };
+		F21557461511C04A00890F82 /* 12_Smoke.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F215573E1511C04A00890F82 /* 12_Smoke.mp4 */; };
+		F21557471511C04A00890F82 /* 12_Start.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F215573F1511C04A00890F82 /* 12_Start.mp4 */; };
+		F21557481511C04A00890F82 /* 12_Zayats.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F21557401511C04A00890F82 /* 12_Zayats.mp4 */; };
 		F27DB29A14F4D1E500C7600F /* 12background12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F27DB29914F4D1E500C7600F /* 12background12.jpg */; };
 		F27DB2A314F4D23E00C7600F /* Bull.mov in Resources */ = {isa = PBXBuildFile; fileRef = F27DB29D14F4D23E00C7600F /* Bull.mov */; };
 		F27DB2A414F4D23E00C7600F /* Fox.mov in Resources */ = {isa = PBXBuildFile; fileRef = F27DB29E14F4D23E00C7600F /* Fox.mov */; };
@@ -26,6 +34,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F21557391511C04A00890F82 /* 12_Background_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12_Background_01.png; sourceTree = "<group>"; };
+		F215573A1511C04A00890F82 /* 12_Background_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12_Background_02.png; sourceTree = "<group>"; };
+		F215573B1511C04A00890F82 /* 12_Bull.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 12_Bull.mp4; sourceTree = "<group>"; };
+		F215573C1511C04A00890F82 /* 12_Fox.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 12_Fox.mp4; sourceTree = "<group>"; };
+		F215573D1511C04A00890F82 /* 12_Kust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12_Kust.png; sourceTree = "<group>"; };
+		F215573E1511C04A00890F82 /* 12_Smoke.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 12_Smoke.mp4; sourceTree = "<group>"; };
+		F215573F1511C04A00890F82 /* 12_Start.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 12_Start.mp4; sourceTree = "<group>"; };
+		F21557401511C04A00890F82 /* 12_Zayats.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 12_Zayats.mp4; sourceTree = "<group>"; };
 		F27DB29914F4D1E500C7600F /* 12background12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 12background12.jpg; path = story/12background12.jpg; sourceTree = "<group>"; };
 		F27DB29D14F4D23E00C7600F /* Bull.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Bull.mov; sourceTree = "<group>"; };
 		F27DB29E14F4D23E00C7600F /* Fox.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Fox.mov; sourceTree = "<group>"; };
@@ -74,6 +90,14 @@
 				F27DB2A014F4D23E00C7600F /* Nora.mov */,
 				F27DB2A114F4D23E00C7600F /* Smoke.mov */,
 				F27DB2A214F4D23E00C7600F /* Start.mov */,
+				F21557391511C04A00890F82 /* 12_Background_01.png */,
+				F215573A1511C04A00890F82 /* 12_Background_02.png */,
+				F215573B1511C04A00890F82 /* 12_Bull.mp4 */,
+				F215573C1511C04A00890F82 /* 12_Fox.mp4 */,
+				F215573D1511C04A00890F82 /* 12_Kust.png */,
+				F215573E1511C04A00890F82 /* 12_Smoke.mp4 */,
+				F215573F1511C04A00890F82 /* 12_Start.mp4 */,
+				F21557401511C04A00890F82 /* 12_Zayats.mp4 */,
 			);
 			name = page12;
 			sourceTree = "<group>";
@@ -190,6 +214,14 @@
 				F27DB2A614F4D23E00C7600F /* Nora.mov in Resources */,
 				F27DB2A714F4D23E00C7600F /* Smoke.mov in Resources */,
 				F27DB2A814F4D23E00C7600F /* Start.mov in Resources */,
+				F21557411511C04A00890F82 /* 12_Background_01.png in Resources */,
+				F21557421511C04A00890F82 /* 12_Background_02.png in Resources */,
+				F21557431511C04A00890F82 /* 12_Bull.mp4 in Resources */,
+				F21557441511C04A00890F82 /* 12_Fox.mp4 in Resources */,
+				F21557451511C04A00890F82 /* 12_Kust.png in Resources */,
+				F21557461511C04A00890F82 /* 12_Smoke.mp4 in Resources */,
+				F21557471511C04A00890F82 /* 12_Start.mp4 in Resources */,
+				F21557481511C04A00890F82 /* 12_Zayats.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
